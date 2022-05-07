@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/', [ShopController::class, 'index']);
 
 Route::get('/mycart', [ShopController::class, 'mycart'])->middleware('auth');
+Route::post('/mycart', [ShopController::class, 'addMycart']);//追記
+
+// Route::get('/mycart', [ShopController::class, 'mycart']);
 
 Auth::routes();
 
